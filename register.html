@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vaccination Registration</title>
+    <style>
+        body {
+            text-align: center;
+            margin-top: 20px;
+            background-color: #f5f5f5;
+        }
+        
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        
+        form label {
+            display: block;
+            margin-bottom: 5px;
+            text-align: left;
+        }
+        
+        form select,
+        form input[type="text"],
+        form input[type="number"],
+        form button[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            box-sizing: border-box;
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
+        
+        .gender-container {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
+        
+        .gender-container label {
+            margin-right: 10px;
+        }
+        
+        .gender-container input[type="radio"] {
+            transform: scale(1.5);
+            margin-right: 5px;
+        }
+        
+        .gender-container input[type="radio"] + label {
+            margin-right: 20px;
+        }
+        
+        button[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h2>Register for Vaccination</h2>
+    <form action="register.php" method="POST">
+        <div>
+            <label for="photoIdProof">Photo ID Proof:</label>
+            <select name="photoIdProof" id="photoIdProof" required>
+                <option value="" disabled selected>Select ID Proof</option>
+                <option value="aadhar">Aadhar Card</option>
+                <option value="voterId">Voter ID Card</option>
+                <option value="drivingLicense">Driving License</option>
+                <!-- Add more options for other ID proofs -->
+            </select>
+        </div>
+        <div>
+            <label for="photoIdNumber">Photo ID Number:</label>
+            <input type="text" name="photoIdNumber" id="photoIdNumber" required>
+        </div>
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name" required>
+        </div>
+        <div class="gender-container">
+            <label for="gender">Gender:</label>
+            <input type="radio" name="gender" id="gender-male" value="male" required>
+            <label for="gender-male">Male</label>
+            <input type="radio" name="gender" id="gender-female" value="female" required>
+            <label for="gender-female">Female</label>
+        </div>
+        <div>
+            <label for="yearOfBirth">Year of Birth:</label>
+            <input type="number" name="yearOfBirth" id="yearOfBirth" required>
+        </div>
+        <button type="submit">Register</button>
+    </form>
+        
+</body>
+</html>

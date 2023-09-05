@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>One Page Wonder - Start Bootstrap Template</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i"
+        rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+    <style>
+        /* Custom CSS for the search box */
+        .search-container {
+            display: flex;
+            align-items: center;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .search-input {
+            flex: 1;
+            padding: 10px;
+            border: 2px solid #28acb6;
+            border-right: none;
+            border-radius: 0;
+            font-size: 16px;
+        }
+
+        .search-input:focus {
+            outline: none;
+            box-shadow: none;
+        }
+
+        .search-button {
+            border: none;
+            background-color: #0a0a0a;
+            padding: 10px 15px;
+            color: #fff;
+            border-radius: 0;
+            cursor: pointer;
+        }
+
+        .search-button:hover {
+            background-color: #219ca3;
+        }
+    </style>
+</head>
+
+<body id="page-top">
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+        <div class="container px-5">
+            <a class="navbar-brand" href="#page-top">VaxPortal</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span
+                    class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contacts">Contacts</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Header-->
+    <header class="masthead text-center text-white">
+        <div class="masthead-content">
+            <div class="container px-5">
+                <h1 class="masthead-heading mb-0">Immunize Yourself</h1>
+                <h2 class="masthead-subheading mb-0">India's VaxPortal</h2>
+                <div class="search-container">
+                </div>
+            </div>
+        </div>
+        <div class="bg-circle-1 bg-circle"></div>
+        <div class="bg-circle-2 bg-circle"></div>
+        <div class="bg-circle-3 bg-circle"></div>
+        <div class="bg-circle-4 bg-circle"></div>
+    </header>
+    <!-- Content section 1-->
+    <section id="scroll">
+        <div class="container px-5">
+            <div class="row gx-5 align-items-center">
+                <div class="col-lg-12">
+                    <div class="p-5">
+                        <h2 class="display-4">Search Vaccination Centers</h2>
+                        <form action="register.php" method="POST">
+                            <div class="mt-3">
+                                <label for="centerSelect">Select Vaccination Center</label>
+                                <select class="form-select" id="centerSelect" name="centerSelect">
+                                    <option selected disabled>Select Center</option>
+                                    <option value="Center 1">Center 1</option>
+                                    <option value="Center 2">Center 2</option>
+                                    <option value="Center 3">Center 3</option>
+                                    <!-- Add more options for other centers -->
+                                </select>
+                            </div>
+                            <div class="mt-3">
+                                <label for="workingHours">Working Hours</label>
+                                <select class="form-select" id="workingHours" name="workingHours">
+                                    <option selected disabled>Select working hours</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="photoIdProof">Photo ID Proof:</label>
+                                <select name="photoIdProof" id="photoIdProof" class="form-select" required>
+                                    <option value="" disabled selected>Select ID Proof</option>
+                                    <option value="aadhar">Aadhar Card</option>
+                                    <option value="voterId">Voter ID Card</option>
+                                    <option value="drivingLicense">Driving License</option>
+                                    <!-- Add more options for other ID proofs -->
+                                </select>
+                            </div>
+                            <div>
+                                <label for="photoIdNumber">Photo ID Number:</label>
+                                <input type="text" name="photoIdNumber" id="photoIdNumber" class="form-control" required>
+                            </div>
+                            <div>
+                                <label for="name">Name:</label>
+                                <input type="text" name="name" id="name" class="form-control" required>
+                            </div>
+                            <div class="gender-container">
+                                <label for="gender">Gender:</label>
+                                <input type="radio" name="gender" id="gender-male" value="male" required>
+                                <label for="gender-male">Male</label>
+                                <input type="radio" name="gender" id="gender-female" value="female" required>
+                                <label for="gender-female">Female</label>
+                                <input type="radio" name="gender" id="gender-lgbtq" value="lgbtq" required>
+                                <label for="gender-lgbtq">LGBTQIA+</label>
+                            </div>
+                            <div>
+                                <label for="yearOfBirth">Year of Birth:</label>
+                                <input type="number" name="yearOfBirth" id="yearOfBirth" class="form-control" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary mt-3">Register</button>
+                        </form>                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+    <!-- Content section 2-->
+    <section>
+        <div class="container px-5">
+            <div class="row gx-5 align-items-center">
+                <div class="col-lg-6">
+                    <div class="p-5"><img class="img-fluid rounded-circle" src="assets/img/image2.jpg" alt="..." />
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="p-5">
+                        <h2 class="display-4">We Salute You!</h2>
+                        <p>We owe a debt of gratitude to our incredible doctors who have shown unwavering courage,
+                            resilience, and compassion throughout the COVID-19 pandemic. Their tireless efforts and
+                            sacrifices are a testament to their noble profession and serve as an inspiration to us all.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Content section 3-->
+    <section>
+        <div class="container px-5">
+            <div class="row gx-5 align-items-center">
+                <div class="col-lg-6 order-lg-2">
+                    <div class="p-5"><img class="img-fluid rounded-circle" src="assets/img/image3.jpg" alt="..." />
+                    </div>
+                </div>
+                <div class="col-lg-6 order-lg-1">
+                    <div class="p-5">
+                        <h2 class="display-4">Get Your Booster Dose</h2>
+                        <p>The booster dose is designed to reinforce your immune response and provide an extra layer of
+                            defense against emerging variants and potential waning immunity over time. It helps to
+                            further strengthen your body's ability to fight off the virus, reducing the risk of severe
+                            illness, hospitalization, and transmission.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer-->
+    <footer class="py-5">
+        <div class="footer-para bg-#28acb6">
+            <p>VaxPortal is a government initiative dedicated to providing free COVID-19 vaccinations to the people of
+                our nation. With a strong commitment to public health and the well-being of our citizens,
+                VaxPortal aims to ensure that every individual has access to safe and effective vaccines.
+                Our mission is to facilitate a seamless vaccination process, making it convenient for people to get
+                immunized against the COVID-19 virus.
+                Through our extensive network of vaccination centers and dedicated healthcare professionals, we strive
+                to administer vaccines efficiently
+                and prioritize the health and safety of the population.
+            </p>
+        </div>
+        <div class="container px-5">
+            <p class="m-0 text-center text-white small">Copyright &copy; Your Website 2023</p>
+        </div>
+    </footer>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <!--<script src="js/scripts.js"></script>-->
+    <script>
+        window.onload = function() {
+        alert('Login successful!');
+    };
+        const centerSelect = document.getElementById('centerSelect');
+        const workingHoursSelect = document.getElementById('workingHours');
+
+        centerSelect.addEventListener('change', () => {
+            const selectedCenter = centerSelect.value;
+            const workingHours = getWorkingHours(selectedCenter);
+            populateWorkingHours(workingHours);
+        });
+
+        function getWorkingHours(center) {
+            // Replace with your logic to fetch working hours based on the selected center
+            switch (center) {
+                case 'Center 1':
+                    return [
+                        'Monday-Friday, 9:00 AM - 5:00 PM',
+                        'Saturday-Sunday, 10:00 AM - 4:00 PM'
+                    ];
+                case 'Center 2':
+                    return ['Monday-Saturday, 8:00 AM - 6:00 PM'];
+                case 'Center 3':
+                    return ['Monday-Sunday, 10:00 AM - 8:00 PM'];
+                default:
+                    return [];
+            }
+        }
+
+        function populateWorkingHours(hours) {
+            workingHoursSelect.innerHTML = '';
+            hours.forEach((hour) => {
+                const option = document.createElement('option');
+                option.value = hour;
+                option.text = hour;
+                workingHoursSelect.appendChild(option);
+            });
+        }
+    </script>
+</body>
+
+</html>
